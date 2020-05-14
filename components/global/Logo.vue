@@ -1,6 +1,6 @@
 <template>
   <nav :class="$style.nav">
-    <img src="~/assets/images/geekait.png" alt="logo" srcset="" style="width:15em; height:3em;">
+    <img src="~/assets/images/geekait2.png" alt="logo2" srcset="" style="width:15em; height:3em;">
   </nav>
 </template>
 

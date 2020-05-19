@@ -1,6 +1,6 @@
 <template>
   <nav :class="$style.nav">
-    <img src="~/assets/images/geekait2.png" alt="logo2" srcset="" style="width:26em; height:5em;">
+    <img src="~/assets/images/geekait2.png" alt="logo2" srcset="" class="logo" style="width:26em; height:5em;">
   </nav>
 </template>
 
@@ -19,6 +19,13 @@ export default {
 
 <style lang="scss" module>
 @import '~/assets/css/utilities/_variables.scss';
+
+@media all and (max-width: 520px) {
+/* Logo for Mobile */
+.logo {
+  width:26em;
+  height:5em;
+}}
 
 .nav {
   position: fixed;

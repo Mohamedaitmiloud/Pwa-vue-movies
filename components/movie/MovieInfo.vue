@@ -109,6 +109,13 @@
               {{ item.production_companies | arrayToList }}
             </div>
           </li>
+            <li>
+            <div :class="$style.label">
+              Egybest
+            </div>
+
+            <div :class="$style.value" v-html="egybestLink(item.original_title,item.release_date)" />
+          </li>
         </ul>
       </div>
 
@@ -161,6 +168,14 @@ export default {
   methods: {
     formatGenres (genres) {
       return genres.map(genre => `<a href="/genre/${genre.id}/movie">${genre.name}</a>`).join(', ');
+    },
+    egybestLink (name, year) {
+      const baseUrl = 'https://fool.egybest.life/movie/';
+      name = name.replace(/\s+/g, '-').toLowerCase();
+      name = name.replace(':', '');
+      const date = new Date(year);
+      year = date.getFullYear();
+      return `<a target="_blank" href="${baseUrl}${name}-${year}"> Download page </a>`;
     },
   },
 };

@@ -118,6 +118,13 @@
               {{ item.networks | arrayToList }}
             </div>
           </li>
+          <li>
+            <div :class="$style.label">
+              Egybest
+            </div>
+
+            <div :class="$style.value"  v-html="egybestLink(item.original_name,item.first_air_date)" />
+          </li>
         </ul>
       </div>
 
@@ -174,6 +181,14 @@ export default {
 
     formatRunTime (times) {
       return times.map(time => `${time}m`).join(', ');
+    },
+    egybestLink (name, year) {
+      const baseUrl = 'https://fool.egybest.life/series/';
+      name = name.replace(/\s+/g, '-').toLowerCase();
+      name = name.replace(':', '');
+      const date = new Date(year);
+      year = date.getFullYear();
+      return `<a target="_blank" href="${baseUrl}${name}-${year}"> Download page </a>`;
     },
   },
 };

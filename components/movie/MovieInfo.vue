@@ -113,7 +113,6 @@
             <div :class="$style.label">
               Egybest
             </div>
-
             <div :class="$style.value" v-html="egybestLink(item.original_title,item.release_date)" />
           </li>
         </ul>

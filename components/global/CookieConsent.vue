@@ -38,7 +38,7 @@ export default {
 
   mounted () {
     if (!this.getVisited()) {
-      this.isOpen = true;
+      this.isOpen = false;
     }
   },
 

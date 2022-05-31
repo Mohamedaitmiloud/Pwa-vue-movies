@@ -2,7 +2,7 @@
   "name": "vue-movies",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "Jason Ujma-Alvis",
+  "author": "Mohamed Aitmiloud",
   "private": true,
   "scripts": {
     "dev": "nuxt",
